@@ -64,13 +64,6 @@ def get_CIFAR10(d=0):
     return trainset,testset
 
 
-def get_manifold(dataset_name='dollar'):
-    inputs = np.load('/mnt/home/samadda1/Intrinsic_SparC_IB/data/{}/input.npy'.format(dataset_name))
-    targets = np.load('/mnt/home/samadda1/Intrinsic_SparC_IB/data/{}/target.npy'.format(dataset_name))
-    trainset = Dataset(inputs[0:8000,],targets[0:8000])
-    testset = Dataset(inputs[8000:10000,],targets[8000:10000])
-    return trainset,testset
-
 def get_data(dataset='mnist',d=0,noisy=False):
     '''
     This function returns the training and validation set from MNIST

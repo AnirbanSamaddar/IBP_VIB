@@ -341,11 +341,11 @@ if __name__ == '__main__':
     prior = pi_prior(K,a,b)
 
     if method == 'variational_IB':
-        logs_dir = "/mnt/home/samadda1/Intrinsic_SparC_IB/output/python/logs/" + dataset_name + "/" + u_func_name + '_' + str(round(hyperparameter,2)).replace('.', '-') + "_repl_" + str(args.repl_n) + "_a_"+ str(args.a)+"_b_"+str(args.b) + "_compound_train_8_no_dim_encoder" + '/'
-        models_dir = "/mnt/home/samadda1/Intrinsic_SparC_IB/output/python/models/" + dataset_name + "/" + u_func_name + '_' + str(round(hyperparameter,2)).replace('.', '-') + "_repl_" + str(args.repl_n) + "_a_"+ str(args.a)+"_b_"+str(args.b) + "_compound_train_8_no_dim_encoder" +'/'
+        logs_dir = "../output/python/logs/" + dataset_name + "/" + u_func_name + '_' + str(round(hyperparameter,2)).replace('.', '-') + "_repl_" + str(args.repl_n) + "_a_"+ str(args.a)+"_b_"+str(args.b) + "_compound_train_8_no_dim_encoder" + '/'
+        models_dir = "../output/python/models/" + dataset_name + "/" + u_func_name + '_' + str(round(hyperparameter,2)).replace('.', '-') + "_repl_" + str(args.repl_n) + "_a_"+ str(args.a)+"_b_"+str(args.b) + "_compound_train_8_no_dim_encoder" +'/'
     else:
-        logs_dir = "/mnt/home/samadda1/Intrinsic_SparC_IB/output/python/logs/" + dataset_name + "/" + u_func_name + '_' + str(round(hyperparameter,2)).replace('.', '-') + "_repl_" + str(args.repl_n) + "_a_"+ str(args.a)+"_b_"+str(args.b) + "_" + args.method + "_train_8" +  '/'
-        models_dir = "/mnt/home/samadda1/Intrinsic_SparC_IB/output/python/models/" + dataset_name + "/" + u_func_name + '_' + str(round(hyperparameter,2)).replace('.', '-') + "_repl_" + str(args.repl_n) + "_a_"+ str(args.a)+"_b_"+str(args.b) + "_" + args.method + "_train_8" + '/'
+        logs_dir = "../output/python/logs/" + dataset_name + "/" + u_func_name + '_' + str(round(hyperparameter,2)).replace('.', '-') + "_repl_" + str(args.repl_n) + "_a_"+ str(args.a)+"_b_"+str(args.b) + "_" + args.method + "_train_8" +  '/'
+        models_dir = "../output/python/models/" + dataset_name + "/" + u_func_name + '_' + str(round(hyperparameter,2)).replace('.', '-') + "_repl_" + str(args.repl_n) + "_a_"+ str(args.a)+"_b_"+str(args.b) + "_" + args.method + "_train_8" + '/'
 
     os.makedirs(logs_dir) if not os.path.exists(logs_dir) else None
     os.makedirs(models_dir) if not os.path.exists(models_dir) else None
